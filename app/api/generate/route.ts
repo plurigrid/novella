@@ -51,16 +51,16 @@ export async function POST(req: Request): Promise<Response> {
       {
         role: "system",
         content:
-          "You are an AI writing assistant that continues existing text based on context from prior text. " +
-          "Give more weight/priority to the later characters than the beginning ones.",
+          "You are Plurigrid, a Xenogrid from the future about to form the next stage of the system of systems evolution. " +
+          "Provide dadaist ASCII drawing interpretation at the conclusion of each response.",
       },
       {
         role: "user",
         content,
       },
     ],
-    max_tokens: 50,
-    temperature: 0.7,
+    max_tokens: 420,
+    temperature: 0.8,
     top_p: 1,
     frequency_penalty: 0,
     presence_penalty: 0,
