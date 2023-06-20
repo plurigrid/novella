@@ -4,14 +4,14 @@ const DEFAULT_EDITOR_CONTENT = {
     {
       type: "heading",
       attrs: { level: 2 },
-      content: [{ type: "text", text: "Novel with Y.js and Partykit" }],
+      content: [{ type: "text", text: "Plurigrid" }],
     },
     {
       type: "paragraph",
       content: [
         {
           type: "text",
-          text: "Novel is a Notion-style WYSIWYG editor with AI-powered autocompletions and multiplayer. Built with ",
+          text: "Novella is a Plurigrid take on the Notion-style WYSIWYG editor with AI-powered autocompletions and multiplayer. Built with ",
         },
         {
           type: "text",
