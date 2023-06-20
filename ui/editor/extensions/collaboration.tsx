@@ -10,7 +10,7 @@ const partykitHost = "yjs.threepointone.partykit.dev/party";
 const yDoc = new Y.Doc();
 export const yProvider = new YProvider(
   partykitHost,
-  "novel-yjs-multiplayer-party",
+  "plurigrid-generative-cocreation", // originally `novel-yjs-multiplayer-party``
   yDoc,
   { connect: false },
 );
