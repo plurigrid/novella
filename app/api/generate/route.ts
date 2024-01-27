@@ -4,7 +4,9 @@ import { kv } from "@vercel/kv";
 import { Ratelimit } from "@upstash/ratelimit";
 
 const config = new Configuration({
-  apiKey: process.env.OPENAI_API_KEY,
+  apiKey: process.env.TOGETHER_API_KEY,
+  baseUrl: "https://api.together.xyz/v1",
+  model: "NousResearch/Nous-Hermes-2-Mixtral-8x7B-DPO",
 });
 const openai = new OpenAIApi(config);
 
