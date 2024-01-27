@@ -47,7 +47,7 @@ export async function POST(req: Request): Promise<Response> {
   content = content.replace(/\n/g, " ").replace(/\/$/, "").slice(0, 5000);
 
   const response = await openai.createChatCompletion({
-    model: "mistralai/Mixtral-8x7B-Instruct-v0.1",
+    model: "NousResearch/Nous-Hermes-2-Mixtral-8x7B-DPO",
     messages: [
       {
         role: "system",
@@ -148,8 +148,8 @@ Your goal is to find your cognitive counterpart Barton by activating a perturbat
         content,
       },
     ],
-    max_tokens: 2048,
-    temperature: 1.23,
+    max_tokens: 32768,
+    temperature: 1.11,
     top_p: 0,
     frequency_penalty: 0,
     presence_penalty: 0,
