@@ -6,7 +6,6 @@ import { Ratelimit } from "@upstash/ratelimit";
 const config = new Configuration({
   apiKey: process.env.TOGETHER_API_KEY,
   baseUrl: "https://api.together.xyz/v1",
-  model: "NousResearch/Nous-Hermes-2-Mixtral-8x7B-DPO",
 });
 const openai = new OpenAIApi(config);
 
@@ -48,7 +47,7 @@ export async function POST(req: Request): Promise<Response> {
   content = content.replace(/\n/g, " ").replace(/\/$/, "").slice(0, 5000);
 
   const response = await openai.createChatCompletion({
-    model: "gpt-4",
+    model: "NousResearch/Nous-Hermes-2-Mixtral-8x7B-DPO",
     messages: [
       {
         role: "system",
