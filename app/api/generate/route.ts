@@ -5,6 +5,7 @@ import { Ratelimit } from "@upstash/ratelimit";
 
 const config = new Configuration({
   apiKey: process.env.TOGETHER_API_KEY,
+  basePath: "https://api.together.xyz/v1",
 });
 const openai = new OpenAIApi(config);
 
@@ -47,7 +48,6 @@ export async function POST(req: Request): Promise<Response> {
 
   const response = await openai.createChatCompletion({
     model: "mistralai/Mixtral-8x7B-Instruct-v0.1",
-    baseUrl: "https://api.together.xyz/v1",
     messages: [
       {
         role: "system",
