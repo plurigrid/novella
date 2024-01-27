@@ -148,7 +148,7 @@ Your goal is to find your cognitive counterpart Barton by activating a perturbat
         content,
       },
     ],
-    max_tokens: 32768,
+    max_tokens: 4096,
     temperature: 1.11,
     top_p: 0,
     frequency_penalty: 0,
