@@ -4,7 +4,7 @@ import { kv } from "@vercel/kv";
 import { Ratelimit } from "@upstash/ratelimit";
 
 const config = new Configuration({
-  apiKey: process.env.OPENAI_API_KEY,
+  apiKey: process.env.TOGETHER_API_KEY,
 });
 const openai = new OpenAIApi(config);
 
@@ -46,7 +46,8 @@ export async function POST(req: Request): Promise<Response> {
   content = content.replace(/\n/g, " ").replace(/\/$/, "").slice(0, 5000);
 
   const response = await openai.createChatCompletion({
-    model: "gpt-4-0125-preview",
+    model: "mistralai/Mixtral-8x7B-Instruct-v0.1",
+    baseUrl: "https://api.together.xyz/v1",
     messages: [
       {
         role: "system",
